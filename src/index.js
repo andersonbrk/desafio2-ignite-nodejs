@@ -20,7 +20,7 @@ function checksExistsUserAccount(request, response, next) {
     return response.status(400).json({ error: "User not found"});
   }
 
-  req.user = user;
+  request.user = user;
 
   return next();
 }
